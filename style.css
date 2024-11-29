@@ -1,0 +1,282 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    max-width:auto;
+}
+
+/* Splash Screen Styling */
+#splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+#typing-box {
+    border: 2px solid white;
+    padding: 20px;
+    font-size: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+#typing-text {
+    color: #9d00ff; /* Matrix-style green */
+    font-size: 1.5em;
+}
+
+/* Home Screen */
+#home-screen {
+    padding: 40px 20px;
+    background-color: black;
+}
+
+/* Header Section */
+header {
+    padding-top: 10%; /* Adjust for spacing from the top */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Correct alignment */
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px; /* Adjust for overall container size */
+    margin: 0 auto; /* Center the header container */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/stars gif.webp') no-repeat center center / cover; /* Add transparency */
+    color: white; /* Ensure text contrasts with the background */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Left Content */
+#left-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    text-align: left; /* Align text to the left */
+    margin-top: 5%; /* Add space from the top */
+    flex: 1; /* Ensure left content takes up its proportionate space */
+}
+
+#left-content h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+#left-content p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Social Icons */
+#social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Center the icons vertically */
+    margin-top: 10px; /* Add spacing between the title and the icons */
+    gap: 15px; /* Add space between each icon */
+}
+
+#social-icons img {
+    width: 40px; /* Consistent icon size */
+    height: 40px;
+    display: block;
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect on hover */
+}
+
+#social-icons img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* Right Content */
+#right-content {
+    flex: 1; /* Ensure right content takes up its proportionate space */
+    max-width: 40%; /* Adjust the width of the image container */
+    text-align: center; /* Center the content inside the container */
+}
+
+#profile-picture {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; /* Center the image within the right content */
+    z-index: 1;
+}
+
+/* Copy Message */
+#copy-message {
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Navigation Bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #ce9dff3f;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-content: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#navbar a:hover {
+    text-decoration:underline;
+}
+
+/* Home Screen */
+#home-screen {
+    padding: 40px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+}
+/* Left Content */
+#left-content {
+    max-width: 30%;
+    text-align: left;
+}
+/* Right Content */
+#right-content {
+    max-width: 30%;
+   align-content: right;
+}
+/* About Me Section */
+
+#about-me {
+    position: relative;
+    background: linear-gradient(black, rgba(0, 0, 0, 0.5), #4d4d4d), url('star.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    overflow: hidden; /* Ensures background doesn't overflow section */
+    padding: 100px 20px; /* Increase padding (top and bottom) */
+}
+
+#about-me::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/banner\ website\ copy.png'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5; /* Adjust for desired transparency */
+    z-index: 1;
+}
+
+.about-header h2 {
+    font-size: 2em;
+    position: relative;
+    z-index: 2
+}
+
+.typing-box {
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 1s step-start infinite;
+}
+
+/* Flashing Cursor Effect */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.about-content {
+    position: relative;
+    z-index: 2; /* Ensures it stays above the background */
+    margin-top: 20px;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+/* General Scrollbar Styling for WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: auto;
+    top:0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 0, 255, 0.714); /* Thumb color (purple, semi-transparent) */
+    border-radius: 10px; /* Rounded edges for the thumb */
+    border: 2px solid black; /* Optional border for the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Track background color (dark) */
+    border-radius: 10px; /* Rounded edges for the track */
+    margin: 5px; /* Add some spacing between the scrollbar and content */
+}
+
+/* Add Hover Effect on the Scrollbar Thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(186, 75, 255); /* Solid purple on hover */
+    cursor: grab; /* Changes cursor to pointer when hovering over the thumb */
+}
+
+/* Firefox-Specific Scrollbar Styling */
+body {
+    scrollbar-color: rgba(157, 0, 255, 0.7) #1a1a1a; /* Thumb and track colors */
+    scrollbar-width: thin; /* Makes the scrollbar narrower */
+}
+
