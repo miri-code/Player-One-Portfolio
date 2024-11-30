@@ -644,3 +644,9 @@ body {
 .section-active {
     display: block !important; /* Ensures the active section is visible */
 }
+
+
+/* Section Visibility Fix */
+.section-active {
+    display: block !important; /* Ensures the active section is visible */
+}
