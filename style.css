@@ -135,25 +135,26 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5%;
-    background-color: #ce9dff3f;
+    height: auto;
+    background-color: rgba(44, 44, 44, 0.8); /* Semi-transparent dark background */
     color: white;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    align-content: center;
 }
 
 #navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+    list-style: none; /* Removes default list bullets */
+    display: flex; /* Places items in a horizontal row */
+    justify-content: center; /* Centers the navbar items */
+    align-items: center; /* Aligns items vertically */
     margin: 0;
     padding: 0;
 }
 
 #navbar li {
-    margin: 0 15px;
+    margin: 0 15px; /* Spacing between links */
+    position: relative; /* For dropdown positioning */
 }
 
 #navbar a {
@@ -162,48 +163,66 @@ header {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 #navbar a:hover {
-    text-decoration:underline;
+    color: #9d00ff; /* Highlight color on hover */
+    text-decoration: underline; /* Optional underline on hover */
 }
+
 /* Dropdown Menu Styling */
+.dropdown {
+    position: relative; /* Ensures the dropdown menu is positioned relative to its parent */
+}
+
 .dropdown-menu {
     display: none; /* Hidden by default */
     position: absolute;
-    top: 100%; /* Below the parent link */
+    top: 100%; /* Position it directly below the "My Work" link */
     left: 0;
-    background-color: #2a2a2a; /* Dark background for the dropdown */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    padding: 10px 0;
-    z-index: 1000;
-    list-style: none;
-    min-width: 150px;
+    background-color: #2a2a2a; /* Dark background for the menu */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Add shadow for depth */
+    padding: 10px 0; /* Add spacing inside the dropdown */
+    z-index: 1000; /* Ensure it appears above other elements */
+    list-style: none; /* Remove default list styles */
+    min-width: 150px; /* Ensure minimum width for the dropdown */
+    visibility: hidden; /* Hide the dropdown menu completely */
+    opacity: 0; /* Fully transparent by default */
+    color:#4CAF50;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
 }
 
 .dropdown-menu li {
-    padding: 5px 10px;
+    padding: 5px 10px; /* Add padding around each menu item */
 }
 
 .dropdown-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: normal;
+    color: rgb(0, 254, 114); /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Adjust font size */
+    display: block; /* Make the link take full width */
 }
 
 .dropdown-menu li a:hover {
-    background-color: #9d00ff; /* Highlight effect */
-    color: white;
+    background-color: #e2bff753; /* Highlight menu item on hover */
+    color: rgb(0, 255, 140);
     border-radius: 5px;
 }
 
-/* Show Dropdown on Hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
+/* Show Dropdown Menu on Hover */
+.dropdown:hover > .dropdown-menu {
+    display: block; /* Show the dropdown menu when hovering over "My Work" */
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Fully opaque when hovering */
+    color:#4CAF50
 }
 
+/* Ensure dropdown menu doesn't persist */
+.dropdown-menu {
+    display: none;
+}
 
 /* Home Screen */
 #home-screen {
@@ -286,6 +305,27 @@ header {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+}
+.highlighted-text {
+    color: #ffa500; /* Use a vibrant orange to match with unity work in the my work section */
+    font-weight: bold; /* Make the text bold for emphasis */
+    background-color: rgba(157, 0, 255, 0.1); /* Optional: Add a subtle background highlight */
+    padding: 2px 4px; /* Add some spacing for better readability */
+    border-radius: 4px; /* Optional: Rounded edges for a softer look */
+}
+.highlighted-text2 {
+    color: #9d00ff; /* Use a vibrant purple color to match blender title in my work section */
+    font-weight: bold; 
+    background-color: rgba(157, 0, 255, 0.1); 
+    padding: 2px 4px; 
+    border-radius: 4px; 
+}
+.highlighted-text3 {
+    color: #4CAF50; /* Use a vibrant green color to make it stand out */
+    font-weight: bold; 
+    background-color: rgba(157, 0, 255, 0.1); 
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 /* General Scrollbar Styling for WebKit Browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
@@ -503,7 +543,39 @@ body {
         max-width: 100%; /* Ensures media resizes for smaller screens */
     }
 }
+#adobe-photoshop {
+    border: 2px solid #4CAF50; /* Green border */
+    padding: 15px; /* Add spacing inside the border */
+    margin: 20px auto; /* Add spacing around the section */
+    border-radius: 8px; /* Optional: Rounded corners for a softer look */
+    background-color: rgba(76, 175, 80, 0.1); /* Subtle green background for contrast */
+    max-width: 600px; /* Set a max width to keep it compact */
+    font-size: 1em; /* Adjust the font size as needed */
+    color: white; /* Match the overall text color */
+    text-align: justify; /* Optional: Justify the text for a clean appearance */
+}
+/* Adobe Photoshop Section - Green Theme */
+.adobe-green {
+    border: 2px solid #4CAF50; /* Green border */
+    background-color: rgba(76, 175, 80, 0.1); /* Subtle green background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 
+.adobe-green h3 {
+    font-size: 1.8em;
+    color: #4CAF50; /* Green title color */
+    margin-bottom: 10px;
+}
+
+.adobe-green p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: white; /* Text color for contrast */
+    text-align: justify; /* Align text neatly */
+}
 
 /* Education Section */
 

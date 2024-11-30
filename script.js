@@ -113,4 +113,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("#navbar a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            // Prevent default navigation
+            event.preventDefault();
+
+            // Scroll to the target section
+            const targetSection = document.querySelector(link.getAttribute("href"));
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: "smooth", // Smooth scrolling effect
+                });
+            }
+        });
+    });
+});
+
 

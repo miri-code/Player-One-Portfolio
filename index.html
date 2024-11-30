@@ -9,12 +9,21 @@
 <body>
     <nav id="navbar">
         <ul>
-            <li><a href="#about-me" data-section="about-me">Home</a></li>
-            <li><a href="#projects" data-section="projects">My Work</a></li>
-            <li><a href="#education" data-section="education">Education</a></li>
-            <li><a href="#experience" data-section="experience">Experience</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li class="dropdown">
+                <a href="#">My Work</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#blender-section">Blender</a></li>
+                    <li><a href="#unity-projects-section">Unity</a></li>
+                    <li><a href="#virtually-real-cafe-section">Virtually Real Cafe</a></li>
+                    <li><a href="#adobe-photoshop">Adobe</a></li>
+                </ul>
+            </li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
         </ul>
     </nav>
+    
         <!-- Splash Screen -->
         <div id="splash">
             <div id="typing-box">
@@ -56,10 +65,12 @@
         <div class="about-content">
             <p>
                 Hello! I'm Miriam, a game designer and developer who loves crafting immersive stories and experiences. 
-                I enjoy exploring themes of fantasy and bringing unique ideas to life through code and design.
+                I enjoy exploring themes of fantasy and bringing unique ideas to life through code and design. I'm familiar with 
+                <span class="highlighted-text">Unity</span>, <span class="highlighted-text2">Blender</span>, and <span class="highlighted-text3">Adobe Photoshop</span>
+                and mainly work in UI/UX, programming, and game design.
             </p>
         </div>
-    </section>
+    </section>    
 <!-- My Work Section -->
 <section id="projects" class="section">
     <div id="projects-container" class="container">
@@ -88,38 +99,38 @@
 <div id="unity-projects-section" class="work-subsection">
     <h3>Unity Projects</h3>
 
-<!-- Ghostly Gallows -->
-<div id="ghostly-gallows-section" class="unity-project">
-    <h4>Ghostly Gallows (WOP)</h4>
-    <h5>Role: UI/UX Designer, Game Designer, Lead Programmer, Project Lead</h5>
-    <p>
-       Ghostly Gallows is a Unity demo set in a haunted mansion, designed as a 2D isometric platformer with a touch of horror. 
-       Players explore various atmospheric rooms, including a bathroom, living room, and bedroom, as they strive to locate the mansion's elusive exit.
-       To progress, players must complete smaller objectives, engaging in interactive mini-games to obtain crucial items like keys. 
-       The introductory level features three distinct, immersive rooms, offering a compelling and eerie starting point that sets the tone for an engaging and suspenseful gameplay experience.
-    </p>
-    <!-- Scrollable Horizontal Image Container -->
-    <div class="scrollable-container">
-        <img src="images/Ghostly Gallows Menu copy.jpg" alt="Ghostly Gallows Menu Screen">
-        <img src="images/gg-bedroom.png" alt="Ghostly Gallows Official Room Scene">
-        <img src="images/gallows-inventory.png" alt="Ghostly Gallows Inventory System">
-        <img src="images/gallows-room.png" alt="Ghostly Gallows Room Scene">
-    </div>
-</div>
-    <!-- Echo -->
-    <div id="echo-section" class="unity-project">
-        <h4>Echo</h4>
-        <h5>Role: Creator (Focus on Programming, UI/UX, Game Design)</h5>
-        <p>
-            Echo is a narrative-driven 2D platformer game showcasing branching dialogue and player choice. 
-            I was the sole creator and team of this project, working on UI/UX, game design, narrative work, and more.
-        </p>
-        <div class="media-container">
-            <img src="images/echo-dialogue.png" alt="Echo Dialogue Example">
-            <img src="GameplayVideos/echo-gameplay.gif" alt="Echo Gameplay GIF">
+        <!-- Ghostly Gallows -->
+        <div id="ghostly-gallows-section" class="unity-project">
+            <h4>Ghostly Gallows (WOP)</h4>
+            <h5>Role: UI/UX Designer, Game Designer, Lead Programmer, Project Lead</h5>
+            <p>
+            Ghostly Gallows is a Unity demo set in a haunted mansion, designed as a 2D isometric platformer with a touch of horror. 
+            Players explore various atmospheric rooms, including a bathroom, living room, and bedroom, as they strive to locate the mansion's elusive exit.
+            To progress, players must complete smaller objectives, engaging in interactive mini-games to obtain crucial items like keys. 
+            The introductory level features three distinct, immersive rooms, offering a compelling and eerie starting point that sets the tone for an engaging and suspenseful gameplay experience.
+            </p>
+            <!-- Scrollable Horizontal Image Container -->
+            <div class="scrollable-container">
+                <img src="images/Ghostly Gallows Menu copy.jpg" alt="Ghostly Gallows Menu Screen">
+                <img src="images/gg-bedroom.png" alt="Ghostly Gallows Official Room Scene">
+                <img src="images/gallows-inventory.png" alt="Ghostly Gallows Inventory System">
+                <img src="images/gallows-room.png" alt="Ghostly Gallows Room Scene">
+            </div>
         </div>
-    </div>
-</div>
+            <!-- Echo -->
+            <div id="echo-section" class="unity-project">
+                <h4>Echo</h4>
+                <h5>Role: Creator (Focus on Programming, UI/UX, Game Design)</h5>
+                <p>
+                    Echo is a narrative-driven 2D platformer game showcasing branching dialogue and player choice. 
+                    I was the sole creator and team of this project, working on UI/UX, game design, narrative work, and more.
+                </p>
+                <div class="media-container">
+                    <img src="images/echo-dialogue.png" alt="Echo Dialogue Example">
+                    <img src="GameplayVideos/echo-gameplay.gif" alt="Echo Gameplay GIF">
+                </div>
+            </div>
+        </div>
     <!-- Virtually Real Cafe -->
     <div id="virtually-real-cafe-section" class="unity-project">
         <h4>Virtually Real Cafe (WOP)</h4>
@@ -143,8 +154,18 @@
         </div>
     </div>
 </div>
+<!-- Adobe Photoshop Section -->
+<div id="adobe-photoshop" class="work-subsection adobe-green">
+    <h3>Adobe Photoshop</h3>
+    <p>
+        Adobe Photoshop was used to create the concept layout of all my UI/UX designs, 2D environments, 
+        and titles that required 3D text, such as in <em>Ghostly Gallows</em>. It was also instrumental in tweaking the lighting 
+        and color palette of sprites provided by the art team on various projects.
+    </p>
+</div>
 </div>
 </section>
+
 
 <!-- Education Section -->
 <section id="education" class="section">
@@ -160,15 +181,15 @@
                     Bachelor of Science in Computational Media
                     (<a href="https://catalog.gatech.edu/programs/computational-media-bs/" target="_blank">Click here for major overview and concentration information</a>)
                 </p>
-                <p class="date">2023 - Present</p>
+                <p class="date">May 2023 - Present</p>
                 <p>CONCENTRATION: Media and Game Design</p>
             </div>
 
             <!-- Kennesaw State University -->
             <div class="education-item">
                 <h3>Kennesaw State University</h3>
-                <p class="degree">Bachelor of Science in Computer Game Design and Development</p>
-                <p class="date">2021 - 2023</p>
+                <p class="degree">Bachelor of Science in Computer Engineering</p>
+                <p class="date">August 2023 - May 2024</p>
                 <p>Completed foundational coursework in game programming, game design principles, and digital art.</p>
             </div>
         </div>
