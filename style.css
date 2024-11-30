@@ -458,12 +458,34 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
+/* Scrollable Image Container for Ghostly Gallows */
+.scrollable-container {
+    display: flex; /* Places images side by side */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 20px; /* Adds space between the images */
+    padding: 10px; /* Adds padding inside the container */
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: Light background to separate images visually */
+    border-radius: 10px; /* Optional: Rounded corners */
+    scrollbar-width: thin; /* Makes the scrollbar less intrusive */
+}
 
-.media-container video {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+/* Styling for Images Inside the Scrollable Container */
+.scrollable-container img {
+    width: 100%; /* Ensures the image scales responsively */
+    max-width: 400px; /* Limits the maximum width of each image */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners to images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Adds a subtle shadow for depth */
+}
+
+/* Custom Scrollbar Styling for Webkit Browsers */
+.scrollable-container::-webkit-scrollbar {
+    height: 8px; /* Makes the scrollbar thinner */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #9d00ff; /* Custom color for the scrollbar */
+    border-radius: 10px; /* Adds rounded corners to the scrollbar */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -513,14 +535,14 @@ body {
 }
 /* Styling for Degree Links */
 .education-item .degree a {
-    color: #007bff; /* Blue for the link */
+    color: #4ea0f7; /* Blue for the link */
     text-decoration: none; /* Removes underline */
     font-weight: bold; /* Makes it stand out */
 }
 
 .education-item .degree a:hover {
     text-decoration: underline; /* Adds underline on hover */
-    color: #0056b3; /* Slightly darker blue on hover */
+    color: #cbaf25; /* Slightly darker blue on hover */
 }
 
 
