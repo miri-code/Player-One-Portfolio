@@ -7,23 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav id="navbar">
         <ul>
-            <li><a href="#about">Home</a></li>
-            <li><a href="#projects">My Work</a></li>
-            <li><a href="#WOP">WOP</a></li>
-            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#about-me" data-section="about-me">Home</a></li>
+            <li><a href="#projects" data-section="projects">My Work</a></li>
+            <li><a href="#education" data-section="education">Education</a></li>
+            <li><a href="#experience" data-section="experience">Experience</a></li>
         </ul>
     </nav>
-
-    <!-- Splash Screen -->
-    <div id="splash">
-        <div id="typing-box">
-            <p id="typing-text"></p>
+        <!-- Splash Screen -->
+        <div id="splash">
+            <div id="typing-box">
+                <p id="typing-text"></p>
+            </div>
         </div>
-    </div>
-
     <!-- Home Screen -->
     <div id="home-screen" style="display: none;">
         <header>
@@ -64,6 +61,147 @@
             </p>
         </div>
     </section>
+<!-- My Work Section -->
+<section id="projects" class="section">
+    <div id="projects-container" class="container">
+        <div class="section-header">
+            <h2>My Work</h2>
+        </div>
+
+        <!-- Blender Section -->
+        <div id="blender-section" class="work-subsection">
+            <h3>Blender</h3>
+            <div class="blender-modeling">
+                <h4>Modeling</h4>
+                <div class="blender-images">
+                    <img src="images/hood.png" alt="Modeling Image 1">
+                    <img src="images/coffeemachine.png" alt="Modeling Image 2">
+                </div>
+            </div>
+            <div class="blender-texturing">
+                <h4>Texturing/Shading</h4>
+                <img src="images/clayexample.png" alt="Texturing Image">
+                <img src="images/texturing-panel.png" alt="Texturing Image">
+            </div>
+        </div>
+
+<!-- Unity Projects Section -->
+<div id="unity-projects-section" class="work-subsection">
+    <h3>Unity Projects</h3>
+
+    <!-- Ghostly Gallows -->
+    <div id="ghostly-gallows-section" class="unity-project">
+        <h4>Ghostly Gallows (WOP)</h4>
+        <h5>Role: UI/UX Designer, Game Designer, Lead Programmer, Project Lead</h5>
+        <p>
+            Ghostly Gallows is a Unity demo game focusing on UI/UX, level design, and narrative development. 
+            Players navigate through a spooky, fun environment with interactive elements and captivating storytelling. 
+            This game is set to be released on itch.io by mid-December.
+        </p>
+        <div class="media-container">
+            <img src="images/gallows-room.png" alt="Ghostly Gallows Room Scene">
+            <img src="images/gallows-inventory.png" alt="Ghostly Gallows Inventory System">
+        </div>
+    </div>
+
+    <!-- Echo -->
+    <div id="echo-section" class="unity-project">
+        <h4>Echo</h4>
+        <h5>Role: Creator (Focus on Programming, UI/UX, Game Design)</h5>
+        <p>
+            Echo is a narrative-driven 2D platformer game showcasing branching dialogue and player choice. 
+            I was the sole creator and team of this project, working on UI/UX, game design, narrative work, and more.
+        </p>
+        <div class="media-container">
+            <img src="images/echo-dialogue.png" alt="Echo Dialogue Example">
+            <img src="GameplayVideos/echo-gameplay.gif" alt="Echo Gameplay GIF">
+        </div>
+    </div>
+</div>
+
+<!-- Education Section -->
+<section id="education" class="section">
+    <div id="education-container" class="container">
+        <div class="section-header">
+            <h2>Education</h2>
+        </div>
+        <div class="section-content">
+            <!-- Georgia Tech -->
+            <div class="education-item">
+                <h3>Georgia Institute of Technology</h3>
+                <p class="degree">
+                    Bachelor of Science in Computational Media
+                    (<a href="https://catalog.gatech.edu/programs/computational-media-bs/" target="_blank">For major overview and concentration information</a>)
+                </p>
+                <p class="date">2023 - Present</p>
+                <p>Specializing in Media and Game Design, focusing on UI/UX, narrative design, and computational creativity.</p>
+            </div>
+
+            <!-- Kennesaw State University -->
+            <div class="education-item">
+                <h3>Kennesaw State University</h3>
+                <p class="degree">Bachelor of Science in Computer Game Design and Development</p>
+                <p class="date">2021 - 2023</p>
+                <p>Completed foundational coursework in game programming, game design principles, and digital art.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section">
+    <div id="experience-container" class="container">
+        <div class="section-header">
+            <h2>Experience</h2>
+        </div>
+        <div class="section-content">
+            <!-- VGDEV Experience -->
+            <div class="job">
+                <h3>Programming and UI/UX Designer</h3>
+                <p class="date">Fall 2024</p>
+                <p>
+                    Contributed to programming and UI/UX design for VGDEV's <strong>"Chime"</strong>. 
+                    Designed interactive interfaces and debugged Unity mechanics.
+                </p>
+                <p>
+                    <em>From VGDEV's website:</em> A once beautiful kingdom has become a den of monsters and ghouls. 
+                    If you want to find a way to save it, you will have to travel to the past to find the answers. 
+                    Obtain items, fight enemies, and (re)make memories to restore this kingdom to its former glory.
+                </p>
+                <p>
+                    Check out our website: <a href="https://www.gtvgdev.com/" target="_blank">VGDEV Official Website</a>
+                </p>
+             <!-- Media Container for Chime Images -->
+            <div id="chime-media-container">
+                <!-- Image 1 -->
+                <div class="image-with-caption">
+                    <img src="images/chime-ui.png" alt="Chime Team UI Example">
+                    <p class="caption">UI Example made by our team</p>
+                </div>
+                <!-- Image 2 -->
+                <div class="image-with-caption">
+                    <img src="images/day-night.png" alt="Day-Night Clock UI">
+                    <p class="caption">UI sample I made for a Day-Night Clock UI</p>
+                </div>
+            </div>
+
+            <!-- Independent Game Developer Experience -->
+                <div class="job">
+                    <h3>Independent Game Developer</h3>
+                    <p class="date">August 2024 - Present</p>
+                    <p>
+                        Designed and developed <strong>"Ghostly Gallows"</strong>, focusing on UI/UX, level design, and narrative. 
+                        Demo showcased on Itch.io (As of December 20th, 2024).
+                    </p>
+                    <!-- Image for Ghostly Gallows -->
+                    <div class="image-container">
+                        <img src="images/Ghostly Gallows Menu copy.jpg" alt="Ghostly Gallows Official Room Scene">
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- JavaScript -->
     <script src="script.js"></script>

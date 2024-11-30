@@ -84,4 +84,33 @@ function createStars(count) {
 // Create 100 stars
 createStars(100);
 
+navLinks.forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault();
+        const targetSection = event.target.getAttribute("data-section");
+
+        // Hide all sections
+        sections.forEach(section => {
+            section.classList.remove("section-active");
+        });
+
+        // Show the target section
+        document.getElementById(targetSection).classList.add("section-active");
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            const targetSection = event.target.getAttribute("data-section");
+            const section = document.getElementById(targetSection);
+
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
+            }
+        });
+    });
+});
 
