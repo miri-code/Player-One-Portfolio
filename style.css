@@ -352,10 +352,18 @@ header {
     cursor: grab; /* Changes cursor to pointer when hovering over the thumb */
 }
 
+
 /* Firefox-Specific Scrollbar Styling */
 body {
     scrollbar-color: rgba(157, 0, 255, 0.7) #1a1a1a; /* Thumb and track colors */
     scrollbar-width: thin; /* Makes the scrollbar narrower */
+}
+
+#blender-section, #echo-section img:hover {
+    transform: scale(1.5); /* Scale up by 10% */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow for effect */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Smooth animation */
+    z-index: 10;
 }
 
 /* My Work Section Container */
@@ -483,6 +491,10 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Shadow for visual depth */
 }
 
+#unity-projects-section img :hover {
+    transition-delay: 2s;
+    transform: scale(2);
+}
 /* Media Containers for Ghostly Gallows and Echo */
 .media-container {
     display: flex;
@@ -516,19 +528,11 @@ body {
     height: auto; /* Maintains aspect ratio */
     border-radius: 10px; /* Adds rounded corners to images */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
 }
 
-/* Custom Scrollbar Styling for Webkit Browsers */
-.scrollable-container::-webkit-scrollbar {
-    height: 8px; /* Makes the scrollbar thinner */
-}
-.scrollable-container::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(186, 75, 255); /* Solid purple on hover */
-    cursor: grab; /* Changes cursor to pointer when hovering over the thumb */
-}
-.scrollable-container::-webkit-scrollbar-thumb {
-    background-color: #9d00ff; /* Custom color for the scrollbar */
-    border-radius: 10px; /* Adds rounded corners to the scrollbar */
+.scrollable-container :hover ::-webkit-scrollbar-thumb{
+    cursor: grab;
 }
 
 /* Responsive Design for Smaller Screens */
