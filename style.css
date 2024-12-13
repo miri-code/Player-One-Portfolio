@@ -531,19 +531,15 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
 }
 
-.scrollable-container :hover ::-webkit-scrollbar-thumb{
+#unity-projects .scrollable-container :hover ::-webkit-scrollbar-thumb{
     cursor: grab;
 /* Custom Scrollbar Styling for Webkit Browsers */
-.scrollable-container::-webkit-scrollbar {
+#unity-projects .scrollable-container::-webkit-scrollbar {
     height: 8px; /* Makes the scrollbar thinner */
 }
-.scrollable-container::-webkit-scrollbar-thumb:hover {
+#unity-projects .scrollable-container::-webkit-scrollbar-thumb:hover {
     background-color: rgb(186, 75, 255); /* Solid purple on hover */
     cursor: grab !important; /* Changes cursor to pointer when hovering over the thumb */
-}
-.scrollable-container::-webkit-scrollbar-thumb {
-    background-color: #9d00ff; /* Custom color for the scrollbar */
-    border-radius: 10px; /* Adds rounded corners to the scrollbar */
 }
 
 /* Responsive Design for Smaller Screens */
