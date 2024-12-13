@@ -546,6 +546,23 @@ body {
         max-width: 100%; /* Ensures media resizes for smaller screens */
     }
 }
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Set the max width of the video container */
+}
+
+#video-container video {
+    width: 100%;
+    max-width: 100%; /* Adjust video size within the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Add a subtle shadow */
+}
+
 #adobe-photoshop {
     border: 2px solid #4CAF50; /* Green border */
     padding: 15px; /* Add spacing inside the border */
